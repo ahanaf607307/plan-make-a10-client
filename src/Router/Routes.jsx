@@ -39,13 +39,14 @@ const routes = createBrowserRouter([
                 element:<PrivateRoute><AddNewCamp/></PrivateRoute>
             },
             {
-                path:'/myCamp',
+                path:'/myCamp/:email',
                 element:<PrivateRoute><MyCampaign/></PrivateRoute>,
-                loader:()=> fetch('http://localhost:8000/campaigns')
+                loader: ({params}) => fetch(`http://localhost:8000/campaign/${params.email}`)
             },
             {
-                path:'/myDonation',
-                element:<PrivateRoute><MyDonations/></PrivateRoute>
+                path:'/myDonation/:email',
+                element:<PrivateRoute><MyDonations/></PrivateRoute>,
+                loader: ({params}) => fetch(`http://localhost:8000/campaign/${params.email}`)
             },
            
         ]

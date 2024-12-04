@@ -19,7 +19,7 @@ function MyCampaign() {
       confirmButtonText: "Yes, delete it!"
     }).then((result) => {
       if (result.isConfirmed) {
-          fetch(`http://localhost:8000/campaigns/${_id}`,{
+          fetch(`http://localhost:8000/campaign/${_id}`,{
               method:'DELETE'
           })
           .then(res => res.json())

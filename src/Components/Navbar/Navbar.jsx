@@ -5,6 +5,7 @@ import logo from "/public/logo.png";
 
 function Navbar() {
   const {users , signOutUser} = useContext(AuthContext)
+  console.log(users)
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -25,7 +26,7 @@ function Navbar() {
           <NavLink to="/addNewCamp">Add New Campaign</NavLink>
         </li>
         <li>
-          <NavLink to="/myCamp">My Campaign</NavLink>
+          <NavLink to={`/myCamp/${users?.email}`}>My Campaign</NavLink>
         </li>
         <li>
           <NavLink to="/myDonation">My Donations</NavLink>

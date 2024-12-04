@@ -8,9 +8,7 @@ function AllCamp() {
   return (
     <div>
     <h1 className='text-center text-3xl'>All Campaigns</h1>
-    {
-      campaigns.length
-    }
+    
 
 <div className="overflow-x-auto">
 <table className="table table-xs">

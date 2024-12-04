@@ -7,7 +7,7 @@ function Home() {
 
 
   return (
-    <div>
+    <div className='my-10'>
       <RunningCampaigns />
     </div>
   )

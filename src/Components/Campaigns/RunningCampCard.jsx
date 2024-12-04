@@ -3,19 +3,24 @@ import React from 'react'
 function RunningCampCard({camps}) {
   const {imageUrl,campignsName,campignsType,minDonation,deadline,userEmail,userName} = camps
   return (
-    <div className="card card-compact bg-base-100 w-96 shadow-xl">
+    <div className="card flex flex-col h-96 card-compact bg-base-100  shadow-xl">
   <figure>
     <img
       src={imageUrl}
-      alt="campaigns" />
+      alt="campaigns"
+      className='h-48 md:h-56 w-full' />
   </figure>
-  <div className="card-body">
-    <h2 className="card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Buy Now</button>
-    </div>
+  <div className="my-3 px-2 flex-1 space-y-2">
+    
+    <h1 className='text-2xl font-bold'>{campignsName}</h1>
+    <h2>Tpye : {campignsType}</h2>
+ 
+  
+    <h1>Deadline : {deadline}</h1>
+  
+
   </div>
+  <button className='btn w-full bg-orange-600 text-white'>See more </button>
 </div>
   )
 }
