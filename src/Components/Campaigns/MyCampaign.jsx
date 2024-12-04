@@ -19,7 +19,7 @@ function MyCampaign() {
       confirmButtonText: "Yes, delete it!"
     }).then((result) => {
       if (result.isConfirmed) {
-          fetch(`http://localhost:8000/campaign/${_id}`,{
+          fetch(`http://localhost:8000/campaigns/${_id}`,{
               method:'DELETE'
           })
           .then(res => res.json())
@@ -54,7 +54,7 @@ function MyCampaign() {
         <th></th>
         <th>Campaign Name</th>
         <th>Campaign Type</th>
-        <th>Minimum donation amount</th>
+        <th>Donation amount</th>
         <th>Deadline </th>
         <th>Update</th>
         <th>Delete </th>

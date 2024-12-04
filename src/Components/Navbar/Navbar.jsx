@@ -29,7 +29,7 @@ function Navbar() {
           <NavLink to={`/myCamp/${users?.email}`}>My Campaign</NavLink>
         </li>
         <li>
-          <NavLink to="/myDonation">My Donations</NavLink>
+          <NavLink to={`/myDonation/${users?.email}`}>My Donations</NavLink>
         </li></div>:''
          }
         </ul>

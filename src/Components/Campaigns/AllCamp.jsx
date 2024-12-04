@@ -17,7 +17,7 @@ function AllCamp() {
       <th></th>
       <th>Campaign Name</th>
       <th>Campaign Type</th>
-      <th>Minimum donation amount</th>
+      <th> Donation amount</th>
       <th>Deadline </th>
       <th>User Email </th>
   

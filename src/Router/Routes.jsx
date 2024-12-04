@@ -10,6 +10,7 @@ import PrivateRoute from "../FireBase/PrivateRoute";
 import SignUp from "../FireBase/SignUp";
 import Home from "../Main/Home";
 import MainLayout from "../Main/MainLayout";
+import Details from "../Components/Campaigns/Details";
 
 const routes = createBrowserRouter([
     {
@@ -41,12 +42,17 @@ const routes = createBrowserRouter([
             {
                 path:'/myCamp/:email',
                 element:<PrivateRoute><MyCampaign/></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:8000/campaign/${params.email}`)
+                loader: ({params}) => fetch(`http://localhost:8000/campaigns/${params.email}`)
             },
             {
                 path:'/myDonation/:email',
                 element:<PrivateRoute><MyDonations/></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:8000/campaign/${params.email}`)
+                loader: ({params}) => fetch(`http://localhost:8000/campaigns/${params.email}`)
+            },
+            {
+                path:'/details/:id',
+                element:<PrivateRoute><Details/></PrivateRoute>,
+                loader: ({params}) => fetch(`http://localhost:8000/campaigns/${params.id}`)
             },
            
         ]

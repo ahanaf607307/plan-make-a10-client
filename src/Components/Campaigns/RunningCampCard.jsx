@@ -1,7 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function RunningCampCard({camps}) {
-  const {imageUrl,campignsName,campignsType,minDonation,deadline,userEmail,userName} = camps
+  const {_id,imageUrl,campignsName,campignsType,minDonation,deadline,userEmail,userName} = camps
   return (
     <div className="card flex flex-col h-96 card-compact bg-base-100  shadow-xl">
   <figure>
@@ -20,7 +21,7 @@ function RunningCampCard({camps}) {
   
 
   </div>
-  <button className='btn w-full bg-orange-600 text-white'>See more </button>
+  <Link to={`/details/${_id}`} className='btn w-full bg-orange-600 text-white'>See more </Link>
 </div>
   )
 }
