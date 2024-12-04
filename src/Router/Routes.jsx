@@ -18,7 +18,8 @@ const routes = createBrowserRouter([
         children:[
             {
                 path:'/',
-                element:<Home/>
+                element:<Home/>,
+                loader:()=> fetch('http://localhost:8000/campaigns')
             },
             {
                 path:'/navbar',

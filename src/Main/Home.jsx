@@ -1,11 +1,14 @@
-import React, { useContext } from 'react'
-import { AuthContext } from '../FireBase/AuthProvider'
+import React from 'react'
+import RunningCampaigns from '../Components/Campaigns/RunningCampaigns'
+import { useLoaderData } from 'react-router-dom'
 
 function Home() {
-    const {name} = useContext(AuthContext)
+
+
+
   return (
     <div>
-      {name}
+      <RunningCampaigns />
     </div>
   )
 }
