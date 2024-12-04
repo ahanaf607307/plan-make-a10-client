@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import AddNewCamp from "../Components/Campaigns/AddNewCamp";
 import AllCamp from "../Components/Campaigns/AllCamp";
+import Details from "../Components/Campaigns/Details";
 import MyCampaign from "../Components/Campaigns/myCampaign";
 import MyDonations from "../Components/Campaigns/myDonations";
 import Footer from "../Components/Footer/Footer";
@@ -10,7 +11,6 @@ import PrivateRoute from "../FireBase/PrivateRoute";
 import SignUp from "../FireBase/SignUp";
 import Home from "../Main/Home";
 import MainLayout from "../Main/MainLayout";
-import Details from "../Components/Campaigns/Details";
 
 const routes = createBrowserRouter([
     {
@@ -52,7 +52,7 @@ const routes = createBrowserRouter([
             {
                 path:'/details/:id',
                 element:<PrivateRoute><Details/></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:8000/campaigns/${params.id}`)
+                loader: ({params}) => fetch(`http://localhost:8000/details/${params.id}`)
             },
            
         ]
