@@ -25,7 +25,7 @@ function Discovar() {
         </div>
         <div>
             <h1 className='font-semibold text-gray-700 text-lg'>Millions in Funding</h1>
-            <p className='text-gray-500 text-sm my-2'>Advanced marketing tools and targeted outreach strategies connect campaigns with the right audiences. The platform’s secure payment processing ensures safe and seamless transactions.</p>
+            <p className='text-gray-500 text-sm my-2'>Advanced marketing tools and targeted outreach strategies connect campaigns with the right audiences. The platform's secure payment processing ensures safe and seamless transactions.</p>
         </div>
       </div>
      </div>
