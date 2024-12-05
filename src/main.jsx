@@ -5,7 +5,7 @@ import CampProvider from './Components/Campaigns/CampProvider'
 import AuthProvider from './FireBase/AuthProvider'
 import './index.css'
 import routes from './Router/Routes'
-
+import 'animate.css';
 
 
 createRoot(document.getElementById('root')).render(

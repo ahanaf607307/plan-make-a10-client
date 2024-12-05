@@ -12,6 +12,7 @@ import PrivateRoute from "../FireBase/PrivateRoute";
 import SignUp from "../FireBase/SignUp";
 import Home from "../Main/Home";
 import MainLayout from "../Main/MainLayout";
+import ErrorPage from "../Main/ErrorPage";
 
 const routes = createBrowserRouter([
   {errorElement:<ErrorPage/>,
