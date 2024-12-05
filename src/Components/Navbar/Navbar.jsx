@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../FireBase/AuthProvider";
-import logo from "/public/logo.png";
+import { FaFirefoxBrowser } from "react-icons/fa";
 
 function Navbar() {
   const {users , signOutUser} = useContext(AuthContext)
@@ -9,11 +9,12 @@ function Navbar() {
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
-        <Link className="btn btn-ghost text-xl">
-          <img className="w-12 rounded-full" src={logo} alt="" />
+        <Link className="btn btn-ghost text-xl text-blue-500">
+        <FaFirefoxBrowser className="text-blue-500 text-2xl"/> PlanMake
         </Link>
       </div>
-      <div className="navbar-center hidden lg:flex" id="navbar">
+      <div className="navbar-center hidden lg:flex" id="navbar"
+      >
         <ul className="menu menu-horizontal px-1">
           <li>
             <NavLink to="/">Home</NavLink>
