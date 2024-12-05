@@ -19,7 +19,7 @@ function RunningCampCard({camps}) {
   
   <div className='flex justify-between text-gray-500 px-3 mt-5'>
   <h1>Deadline : {deadline}</h1>
-  <h1>{minDonation}</h1>
+  <h1>{minDonation} $</h1>
   </div>
   
 

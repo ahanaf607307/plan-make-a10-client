@@ -41,11 +41,11 @@ function MyCampaign() {
     });
   }
   return (
-    <div>
-      <h1 className='text-center text-3xl'>{users.displayName}-Campaigns</h1>
-      {
+    <div className='my-12'>
+      <h1 className='text-center text-3xl md:text-4xl font-semibold'>{users.displayName}-Campaigns</h1>
+      <h1 className='text-2xl text-blue-500 my-5 font-semibold'>Your Total Campaign : {
         campaigns.length
-      }
+      }</h1>
 
 <div className="overflow-x-auto">
   <table className="table table-xs">

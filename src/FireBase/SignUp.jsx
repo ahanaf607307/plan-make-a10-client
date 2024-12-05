@@ -65,9 +65,10 @@ function SignUp() {
      
   };
   return (
-    <div>
-      <form onSubmit={handleRegister}>
-        <label className="form-control w-full max-w-xs">
+    <div className="border-2 rounded-xl shadow-2xl md:w-7/12 my-10 md:my-32 mx-auto p-4 m-2 md:p-10">
+       <h1 className="text-center font-semibold my-5 text-3xl">Register Your Account</h1>
+      <form onSubmit={handleRegister} className="font-semibold text-gray-600">
+        <label className="form-control w-full ">
           <div className="label">
             <span className="label-text">Name</span>
           </div>
@@ -75,10 +76,11 @@ function SignUp() {
             type="text"
             name="name"
             placeholder="Name"
-            className="input input-bordered w-full max-w-xs"
+            className="input input-bordered w-full "
+            required
           />
         </label>
-        <label className="form-control w-full max-w-xs">
+        <label className="form-control w-full ">
           <div className="label">
             <span className="label-text">Photo Url</span>
           </div>
@@ -86,10 +88,11 @@ function SignUp() {
             type="text"
             name="photoUrl"
             placeholder="Photo Url"
-            className="input input-bordered w-full max-w-xs"
+            className="input input-bordered w-full "
+            required
           />
         </label>
-        <label className="form-control w-full max-w-xs">
+        <label className="form-control w-full ">
           <div className="label">
             <span className="label-text">Email</span>
           </div>
@@ -97,10 +100,11 @@ function SignUp() {
             type="email"
             name="email"
             placeholder="Email"
-            className="input input-bordered w-full max-w-xs"
+            className="input input-bordered w-full "
+            required
           />
         </label>
-        <label className="form-control w-full max-w-xs">
+        <label className="form-control w-full ">
           <div className="label">
             <span className="label-text">Password</span>
           </div>
@@ -108,13 +112,14 @@ function SignUp() {
             type="password"
             name="password"
             placeholder="Password"
-            className="input input-bordered w-full max-w-xs"
+            className="input input-bordered w-full "
+            required
           />
         </label>
         <input
           type="submit"
           value="Register"
-          className="btn w-full bg-red-500"
+          className="btn w-full bg-blue-500 my-5 text-white font-semibold"
         />
       </form>
       <h1 className='my-2 text-red-600 mx-auto text-lg'>{errorInvalid} </h1>

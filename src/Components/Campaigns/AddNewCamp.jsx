@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { AuthContext } from '../../FireBase/AuthProvider'
+import Swal from 'sweetalert2'
 
 function AddNewCamp() {
   const {users} = useContext(AuthContext)
@@ -26,13 +27,21 @@ function AddNewCamp() {
     })
     .then(result => result.json())
     .then(data => {
+      Swal.fire({
+        title: "Added Campaign",
+        text: "Your Campaign has been Added.",
+        icon: "success"
+      });
       console.log(data)
     })
+
+    
   }
   return (
-    <div className='w-8/12 border-2 '>
+    <div className='md:w-10/12 border-2 rounded-xl p-10 md:my-20 mx-auto'>
+      <h1 className='text-center font-semibold text-3xl my-6'>Add New Campaign</h1>
      <form onSubmit={handleAddCamp}>
-    <div className='grid grid-cols-2'>
+    <div className='grid md:grid-cols-2 text-gray-600 font-semibold'>
     <div>
      <label className="form-control w-full max-w-xs">
           <div className="label">
@@ -74,7 +83,7 @@ function AddNewCamp() {
           <div className="label">
             <span className="label-text">Description</span>
           </div>
-          <textarea name="description" placeholder='Description' className='input input-bordered w-full max-w-xs'></textarea>
+          <textarea  maxlength="340" name="description" placeholder='Description' className='input input-bordered w-full max-w-xs'></textarea>
         </label>
         </div>
       <div>
@@ -130,7 +139,7 @@ function AddNewCamp() {
         <input
           type="submit"
           value="Add Campaign"
-          className="btn w-full bg-red-500 "
+          className="btn w-full bg-blue-500 text-white font-semibold mt-5"
         />
      </form>
     </div>

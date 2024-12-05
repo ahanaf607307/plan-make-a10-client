@@ -7,7 +7,7 @@ function AllCamp() {
   const {users} = useContext(AuthContext)
   return (
     <div>
-    <h1 className='text-center text-3xl'>All Campaigns</h1>
+    <h1 className='text-center text-3xl mt-10 mb-7 font-semibold'>All Campaigns</h1>
     
 
 <div className="overflow-x-auto">
@@ -33,7 +33,7 @@ function AllCamp() {
         <td>{camp?.minDonation}</td>
         <td>{camp?.deadline}</td>
         <td>{camp?.userEmail}</td>
-        <td><Link to={`/details/${camp?._id}`} className='btn bg-orange-600 text-white'>See More </Link></td>
+        <td><Link to={`/details/${camp?._id}`} className='btn bg-blue-600 text-white'>See More </Link></td>
  
       </tr>)
     }
