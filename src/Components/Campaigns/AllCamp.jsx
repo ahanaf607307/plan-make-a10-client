@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
-import { useLoaderData } from 'react-router-dom'
+import { Link, useLoaderData } from 'react-router-dom'
 import { AuthContext } from '../../FireBase/AuthProvider'
 
 function AllCamp() {
-  const campaigns = useLoaderData()
+  const campaign = useLoaderData()
   const {users} = useContext(AuthContext)
   return (
     <div>
@@ -20,18 +20,20 @@ function AllCamp() {
       <th> Donation amount</th>
       <th>Deadline </th>
       <th>User Email </th>
+      <th></th>
   
     </tr>
   </thead>
   <tbody>
     {
-      campaigns.map((camp,index) => <tr key={camp?._id}>
+      campaign.map((camp,index) => <tr key={camp?._id}>
         <th>{index+1}</th>
         <td>{camp?.campignsName}</td>
         <td>{camp?.campignsType}</td>
         <td>{camp?.minDonation}</td>
         <td>{camp?.deadline}</td>
         <td>{camp?.userEmail}</td>
+        <td><Link to={`/details/${camp?._id}`} className='btn bg-orange-600 text-white'>See More </Link></td>
  
       </tr>)
     }

@@ -13,7 +13,7 @@ function Navbar() {
           <img className="w-12 rounded-full" src={logo} alt="" />
         </Link>
       </div>
-      <div className="navbar-center hidden lg:flex">
+      <div className="navbar-center hidden lg:flex" id="navbar">
         <ul className="menu menu-horizontal px-1">
           <li>
             <NavLink to="/">Home</NavLink>
@@ -84,7 +84,7 @@ function Navbar() {
             </li>
           </ul>
         </div>
-        <div className="dropdown relative">
+        <div className="dropdown relative" id="navbar">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"

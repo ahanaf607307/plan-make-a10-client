@@ -9,6 +9,8 @@ function AuthProvider({ children }) {
 
   const [users , setUsers] = useState(null)
   const [loader , setLoader] = useState(true)
+  const [errorInvalid, setErrorInvalid] = useState("");
+
 // Register new user
   const registerUserNew = ( email , password) => {
     return createUserWithEmailAndPassword(auth, email, password)
@@ -57,6 +59,8 @@ const signOutUser = () => {
     signOutUser,
     loader,
     googleSignIn,
+    errorInvalid,
+    setErrorInvalid
   };
   return (
     <AuthContext.Provider value={userInfo}>{children}</AuthContext.Provider>

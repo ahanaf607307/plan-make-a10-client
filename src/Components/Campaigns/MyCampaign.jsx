@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { useLoaderData } from 'react-router-dom'
+import { Link, useLoaderData } from 'react-router-dom'
 import Swal from 'sweetalert2'
 import { AuthContext } from '../../FireBase/AuthProvider'
 
@@ -68,7 +68,7 @@ function MyCampaign() {
           <td>{camp.campignsType}</td>
           <td>{camp.minDonation}</td>
           <td>{camp.deadline}</td>
-          <td><button className='btn'>へ</button></td>
+          <td><Link to={`/update/${camp._id}`}  className='btn'>へ</Link></td>
           <td><button onClick={()=>handleDeleteCampaign(camp?._id)} className='btn bg-red-300'>x</button></td>
         </tr>)
       }
