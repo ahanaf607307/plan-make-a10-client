@@ -52,7 +52,7 @@ function AddNewCamp() {
             type="text"
             name="imageUrl"
             placeholder="Image Url"
-            className="input input-bordered w-full max-w-xs"
+            className="input input-bordered w-full max-w-xs" required
           />
         </label>
      <label className="form-control w-full max-w-xs">
@@ -63,7 +63,7 @@ function AddNewCamp() {
             type="text"
             name="campignsName"
             placeholder="Campigns Name"
-            className="input input-bordered w-full max-w-xs"
+            className="input input-bordered w-full max-w-xs" required
           />
         </label>
      </div>
@@ -72,7 +72,7 @@ function AddNewCamp() {
           <div className="label">
             <span className="label-text">Select Campaign Type</span>
           </div>
-        <select name="campignsType" className='input input-bordered w-full max-w-xs'>
+        <select name="campignsType" className='input input-bordered w-full max-w-xs' required>
           <option value="">Select Campaign Type</option>
           <option value="Personal Issue">Personal Issue</option>
           <option value="Startup">Startup</option>
@@ -84,7 +84,7 @@ function AddNewCamp() {
           <div className="label">
             <span className="label-text">Description</span>
           </div>
-          <textarea  maxlength="340" name="description" placeholder='Description' className='input input-bordered w-full max-w-xs'></textarea>
+          <textarea  maxlength="340" name="description" placeholder='Description' className='input input-bordered w-full max-w-xs' required></textarea>
         </label>
         </div>
       <div>
@@ -96,7 +96,7 @@ function AddNewCamp() {
             type="text"
             name="minDonation"
             defaultValue="1000"
-            className="input input-bordered w-full max-w-xs"
+            className="input input-bordered w-full max-w-xs" required
           />
         </label>
         <label className="form-control w-full max-w-xs">
@@ -107,7 +107,7 @@ function AddNewCamp() {
             type="date"
             name="deadline"
             placeholder="Deadline"
-            className="input input-bordered w-full max-w-xs"
+            className="input input-bordered w-full max-w-xs" required
           />
         </label>
       </div>
@@ -121,7 +121,7 @@ function AddNewCamp() {
             type="email"
             name="userEmail"
             value={users?.email}
-            className="input input-bordered w-full max-w-xs"
+            className="input input-bordered w-full max-w-xs" required
           />
         </label>
         <label className="form-control w-full max-w-xs">
@@ -132,7 +132,7 @@ function AddNewCamp() {
             type="text"
             name="userName"
             value={users?.displayName}
-            className="input input-bordered w-full max-w-xs read-only"
+            className="input input-bordered w-full max-w-xs read-only" required
           />
         </label>
        </div>
