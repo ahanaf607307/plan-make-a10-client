@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
 import { AuthContext } from '../../FireBase/AuthProvider'
 import Swal from 'sweetalert2'
-import { CampApi } from './CampProvider'
+
 
 function AddNewCamp() {
   const {users} = useContext(AuthContext)
-  const {setUpdateCamp} = useContext(CampApi)
+ 
 
   const handleAddCamp = (e) => {
     e.preventDefault()

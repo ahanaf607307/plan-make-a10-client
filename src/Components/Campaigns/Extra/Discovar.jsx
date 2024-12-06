@@ -6,7 +6,7 @@ function Discovar() {
     <div className='grid md:grid-cols-12 items-center p-5'>
       <div className='md:col-span-7'>
       <h1 className='text-blue-500 font-bold'>READY TO GO --</h1>
-      <h1 className='font-bold text-blue-900 text-2xl md:text-4xl my-4 md:my-7'>Why You Should Choose
+      <h1 className='font-bold text-blue-900 text-2xl md:text-3xl lg:text-4xl my-4 md:my-7'>Why You Should Choose
       PlanMake Platform</h1>
       <p className='text-gray-500 text-sm font-medium my-5 md:my-7'>With verified campaigns, clear organizer details, and endorsements from reputable individuals or organizations, donors can feel confident in supporting your cause.Ensure your website is mobile-friendly and optimized for people with disabilities, making it inclusive for everyone to contribute.</p>
      <div className='flex flex-col gap-y-5'>
