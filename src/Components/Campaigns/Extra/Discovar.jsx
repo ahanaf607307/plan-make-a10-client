@@ -9,20 +9,18 @@ function Discovar() {
       <div className='md:col-span-7'>
    
       <Fade>
-      <h1 className='text-blue-500 font-bold'>READY TO GO --</h1>
-</Fade>
-<Fade>
-  <h1 className='font-bold text-blue-900 text-2xl md:text-3xl lg:text-4xl my-4 md:my-7'>
-      
-      <Typewriter
-            words={['Why You Should Choose PlanMake Platform']}
+      <h1 className='text-blue-500 font-bold'><Typewriter
+            words={['READY TO GO --']}
             loop={Infinity} 
             cursor
             cursorStyle="_"
             typeSpeed={60}
             deleteSpeed={30}
             delaySpeed={1000}
-          />
+          /></h1>
+</Fade>
+<Fade>
+  <h1 className='font-bold text-blue-900 text-2xl md:text-3xl lg:text-4xl my-4 md:my-7'>Why You Should Choose PlanMake Platform
       </h1>
 </Fade>
       
