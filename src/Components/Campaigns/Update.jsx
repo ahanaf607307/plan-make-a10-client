@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { AuthContext } from "../../FireBase/AuthProvider";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../FireBase/AuthProvider";
 
 function Update() {
   const { users } = useContext(AuthContext);
@@ -33,7 +33,7 @@ function Update() {
     };
     console.log(addCampDetails);
     fetch(`http://localhost:8000/campaigns/${_id}`, {
-      method: "PUT",
+      method: "PATCH",
       headers: {
         "content-type": "application/json",
       },
@@ -167,7 +167,7 @@ function Update() {
         </div>
         <input
           type="submit"
-          value="Add Campaign"
+          value="Update Campaign"
           className="btn w-full bg-blue-500 my-5 text-white"
         />
       </form>

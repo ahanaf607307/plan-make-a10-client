@@ -1,13 +1,13 @@
-import React, { useContext } from 'react'
-import { CampApi } from './CampProvider'
+import React from 'react'
+
 import RunningCampCard from './RunningCampCard'
 
-function RunningCampaigns() {
+function RunningCampaigns({runningCampData}) {
 
 
-const {camp} = useContext(CampApi)
 
-console.log(camp)
+
+
   return (
     <div>
       <h1 className='text-sm text-orange-600 text-center font-bold mt-4'>-- BUSINESSES YOU CAN BACK --</h1>
@@ -15,7 +15,7 @@ console.log(camp)
       Explore Now</h1>
 <div className='grid p-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 '>
   {
-    camp.map(camps=><RunningCampCard key={camps?._id} camps={camps} /> )
+    runningCampData.map(camps=><RunningCampCard key={camps?._id} camps={camps} /> )
   }
 </div>
     </div>

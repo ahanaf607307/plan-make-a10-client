@@ -8,6 +8,7 @@ import routes from './Router/Routes'
 import 'animate.css';
 
 
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
  <AuthProvider>
