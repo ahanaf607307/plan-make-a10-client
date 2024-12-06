@@ -21,7 +21,7 @@ function MyCampaign() {
       confirmButtonText: "Yes, delete it!"
     }).then((result) => {
       if (result.isConfirmed) {
-          fetch(`http://localhost:8000/campaigns/${_id}`,{
+          fetch(`https://server-croud-funding.vercel.app/campaigns/${_id}`,{
               method:'DELETE'
           })
           .then(res => res.json())

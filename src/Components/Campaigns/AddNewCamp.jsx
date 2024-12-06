@@ -20,7 +20,7 @@ function AddNewCamp() {
 
     const addCampDetails = {imageUrl,campignsName,campignsType,description,minDonation,deadline,userEmail,userName}
     console.log(addCampDetails)
-    fetch('http://localhost:8000/campaigns' , {
+    fetch('https://server-croud-funding.vercel.app/campaigns' , {
       method:'POST',
       headers:{
         'content-type' : 'application/json'

@@ -1,8 +1,17 @@
-# React + Vite
+# Crowd Funding Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Project Title -( PlanMake )
 
-Currently, two official plugins are available:
+## 🔗 Links
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- https://croud-funding-2024.web.app/
+
+---
+
+## PlanMake, highlighting its strengths and uniqueness
+
+- Innovative Project Support: Empower entrepreneurs, artists, and visionaries to bring their ideas to life with a streamlined and user-friendly platform.
+- Secure Payment Integration: Ensure safe and seamless transactions through trusted payment gateways for backers and project creators.
+- Transparent Goal Tracking: Real-time progress tracking and transparent funding milestones to build trust between creators and contributors.
+- Community Engagement: Foster a supportive environment with built-in tools for discussions, feedback, and social sharing.
+- Customizable Campaigns: Provide creators with flexible templates to design compelling campaigns tailored to their audience.

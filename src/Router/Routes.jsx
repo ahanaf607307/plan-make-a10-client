@@ -22,7 +22,7 @@ const routes = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("http://localhost:8000/campaigns"),
+        loader: () => fetch("https://server-croud-funding.vercel.app/campaigns"),
       },
       {
         path: "/navbar",
@@ -35,7 +35,7 @@ const routes = createBrowserRouter([
       {
         path: "/allCamp",
         element: <AllCamp />,
-        loader: () => fetch("http://localhost:8000/campaign"),
+        loader: () => fetch("https://server-croud-funding.vercel.app/campaign"),
       },
       {
         path: "/addNewCamp",
@@ -53,7 +53,7 @@ const routes = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:8000/campaigns/${params.email}`),
+          fetch(`https://server-croud-funding.vercel.app/campaigns/${params.email}`),
       },
 
       {
@@ -64,7 +64,7 @@ const routes = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:8000/campaignsDonation/${params.email}`),
+          fetch(`https://server-croud-funding.vercel.app/campaignsDonation/${params.email}`),
       },
       {
         path: "/update/:id",
@@ -74,7 +74,7 @@ const routes = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:8000/update/${params.id}`),
+          fetch(`https://server-croud-funding.vercel.app/update/${params.id}`),
       },
       {
         path: "/details/:id",
@@ -84,7 +84,7 @@ const routes = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:8000/details/${params.id}`),
+          fetch(`https://server-croud-funding.vercel.app/details/${params.id}`),
       },
     ],
   },

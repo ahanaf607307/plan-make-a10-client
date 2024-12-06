@@ -5,7 +5,7 @@ export const CampApi = createContext()
 function CampProvider({children}) {
     const [camp , setCamp] = useState([])
     const [allCamp , setAllCamp] = useState([])
-    // const [updateCamp , setUpdateCamp ] = useState(camp)
+   
 useEffect(()=> {
 const fetchData = async()=> {
     const res =await fetch('http://localhost:8000/campaigns')

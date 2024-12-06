@@ -21,7 +21,7 @@ function Details() {
 
   const handleDonate = (_id) => {
     console.log(_id);
-    fetch("http://localhost:8000/campaignsDonation", {
+    fetch("https://server-croud-funding.vercel.app/campaignsDonation", {
       method: "POST",
       headers: {
         "content-type": "application/json",

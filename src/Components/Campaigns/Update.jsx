@@ -32,7 +32,7 @@ function Update() {
       userName,
     };
     console.log(addCampDetails);
-    fetch(`http://localhost:8000/campaigns/${_id}`, {
+    fetch(`https://server-croud-funding.vercel.app/campaigns/${_id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
