@@ -112,15 +112,15 @@ function Navbar() {
           <li>
             <NavLink to="/allCamp">All Campaign</NavLink>
           </li>
-          {
-          users? <div className="flex flex-col gap-y-2"><li>
+         {
+          users? <div className="flex flex-col gap-x-2"><li>
           <NavLink to="/addNewCamp">Add New Campaign</NavLink>
         </li>
         <li>
-          <NavLink to="/myCamp">My Campaign</NavLink>
+          <NavLink to={`/myCamp/${users?.email}`}>My Campaign</NavLink>
         </li>
         <li>
-          <NavLink to="/myDonation">My Donations</NavLink>
+          <NavLink to={`/myDonation/${users?.email}`}>My Donations</NavLink>
         </li></div>:''
          }
           </ul>
