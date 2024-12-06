@@ -37,7 +37,6 @@ const signOutUser = () => {
       title: "SignOut Successfully",
       text: "Do you want to continue",
       icon: "success",
-      confirmButtonText: "Okey",
     });
       }).catch((error) => {
         console.log('Error From ' , error)

@@ -46,7 +46,6 @@ function Update() {
             title: "Successfully Updated!",
             text: "Do you want to continue",
             icon: "success",
-            confirmButtonText: "Okey",
           });
         }
       });
