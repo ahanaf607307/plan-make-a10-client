@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function RunningCampCard({camps}) {
   const {_id,imageUrl,campignsName,campignsType,minDonation,deadline,userEmail,userName} = camps
   return (
-    <div className="card flex flex-col h-[450px] card-compact bg-base-100  shadow-xl animate__jackInTheBox animate__animated relative ">
+    <div className="card flex flex-col h-[470px] card-compact bg-base-100  shadow-xl animate__jackInTheBox animate__animated relative ">
   <div className=''>
     <img
       src={imageUrl}

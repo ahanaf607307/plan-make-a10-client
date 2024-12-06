@@ -1,6 +1,8 @@
 import React, { useContext, useState } from 'react'
 import { Link, useLoaderData } from 'react-router-dom'
 import Swal from 'sweetalert2'
+import { MdDeleteForever } from "react-icons/md";
+import { BiSolidEdit } from "react-icons/bi";
 import { AuthContext } from '../../FireBase/AuthProvider'
 
 function MyCampaign() {
@@ -68,8 +70,8 @@ function MyCampaign() {
           <td>{camp.campignsType}</td>
           <td>{camp.minDonation}</td>
           <td>{camp.deadline}</td>
-          <td><Link to={`/update/${camp._id}`}  className='btn'>へ</Link></td>
-          <td><button onClick={()=>handleDeleteCampaign(camp?._id)} className='btn bg-red-300'>x</button></td>
+          <td><Link to={`/update/${camp._id}`}  className='btn hover:text-white hover:bg-blue-500'><BiSolidEdit className='text-2xl'  /></Link></td>
+          <td><button onClick={()=>handleDeleteCampaign(camp?._id)} className='btn text-white hover:text-black hover:bg-white bg-red-500 '><MdDeleteForever className='text-2xl' /></button></td>
         </tr>)
       }
 
