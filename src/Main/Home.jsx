@@ -10,7 +10,7 @@ const runningCampData = useLoaderData()
 console.log(runningCampData)
 
   return (
-    <div className='my-10'>
+    <div className='my-12'>
       <div>
         <Banner/>
       </div>
