@@ -16,7 +16,7 @@ function SignUp() {
     const email = e.target.email.value;
     const password = e.target.password.value;
     const registerUser = { name, photoUrl, email, password };
-    console.log(registerUser);
+  
 
     const validPassword = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
     if(password.length < 6){
@@ -33,11 +33,11 @@ function SignUp() {
 
     registerUserNew( email, password)
       .then((result) => {
-        console.log(result.user)
+        
         setErrorInvalid('')
         updateProfileUser({displayName:name , photoURL:photoUrl})
         .then(() => {
-            console.log('updated')
+           
             setUsers({
               ...result.user,
             })
@@ -50,7 +50,7 @@ function SignUp() {
         navigate('/')
       })
       .catch(error => {
-        console.log('Err from Register/SignUp->' , error)
+   
         setErrorInvalid(error.message)
       })
 

@@ -26,7 +26,7 @@ function MyCampaign() {
           })
           .then(res => res.json())
           .then(data => {
-              console.log('delete one' , data)
+           
               if(data.deletedCount){
                   Swal.fire({
                       title: "Deleted!",

@@ -5,7 +5,7 @@ import { FaFirefoxBrowser } from "react-icons/fa";
 
 function Navbar() {
   const {users , signOutUser} = useContext(AuthContext)
-  console.log(users)
+
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">

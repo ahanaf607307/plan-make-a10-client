@@ -41,7 +41,7 @@ function Details() {
       return; 
     }
 
-    console.log(_id);
+
     fetch("https://server-croud-funding.vercel.app/campaignsDonation", {
       method: "POST",
       headers: {
@@ -51,7 +51,7 @@ function Details() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log("Response from server:", data);
+
         Swal.fire({
           title: "Donation Successful",
           text: "Thank you for your contribution!",

@@ -2,6 +2,7 @@ import React from 'react'
 import { Fade } from 'react-awesome-reveal';
 import { GiTrophyCup } from "react-icons/gi";
 import { LiaSortNumericUpSolid } from "react-icons/lia";
+import { Typewriter } from 'react-simple-typewriter';
 function Discovar() {
   return (
     <div className='grid md:grid-cols-12 items-center p-5'>
@@ -11,8 +12,18 @@ function Discovar() {
       <h1 className='text-blue-500 font-bold'>READY TO GO --</h1>
 </Fade>
 <Fade>
-  <h1 className='font-bold text-blue-900 text-2xl md:text-3xl lg:text-4xl my-4 md:my-7'>Why You Should Choose
-      PlanMake Platform</h1>
+  <h1 className='font-bold text-blue-900 text-2xl md:text-3xl lg:text-4xl my-4 md:my-7'>
+      
+      <Typewriter
+            words={['Why You Should Choose PlanMake Platform']}
+            loop={Infinity} 
+            cursor
+            cursorStyle="_"
+            typeSpeed={60}
+            deleteSpeed={30}
+            delaySpeed={1000}
+          />
+      </h1>
 </Fade>
       
      <Fade>

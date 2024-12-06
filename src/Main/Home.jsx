@@ -7,7 +7,7 @@ import Banner from '../Components/Campaigns/Banner'
 
 function Home() {
 const runningCampData = useLoaderData()
-console.log(runningCampData)
+
 
   return (
     <div className='my-12'>

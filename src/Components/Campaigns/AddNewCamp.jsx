@@ -19,7 +19,7 @@ function AddNewCamp() {
     const userName = e.target.userName.value;
 
     const addCampDetails = {imageUrl,campignsName,campignsType,description,minDonation,deadline,userEmail,userName}
-    console.log(addCampDetails)
+
     fetch('https://server-croud-funding.vercel.app/campaigns' , {
       method:'POST',
       headers:{
@@ -34,8 +34,6 @@ function AddNewCamp() {
         text: "Your Campaign has been Added.",
         icon: "success"
       });
-      console.log(data)
-      // setUpdateCamp(data)
     })
 
     

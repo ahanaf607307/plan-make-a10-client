@@ -7,8 +7,7 @@ function Update() {
   const { users } = useContext(AuthContext);
   const campaigns = useLoaderData();
   const { _id } = campaigns;
-  console.log(_id);
-  console.log(campaigns);
+
 
   const handleAddCamp = (e) => {
     e.preventDefault();
@@ -31,7 +30,7 @@ function Update() {
       userEmail,
       userName,
     };
-    console.log(addCampDetails);
+  
     fetch(`https://server-croud-funding.vercel.app/campaigns/${_id}`, {
       method: "PATCH",
       headers: {
@@ -41,7 +40,7 @@ function Update() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+       
         if (data.modifiedCount > 0) {
           Swal.fire({
             title: "Successfully Updated!",

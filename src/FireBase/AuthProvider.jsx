@@ -2,6 +2,7 @@
 import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import React, { createContext, useEffect, useState } from "react";
 import auth from "./firebase.init";
+import Swal from "sweetalert2";
 
 export const AuthContext = createContext();
 function AuthProvider({ children }) {
@@ -32,7 +33,12 @@ const googleSignIn = () => {
 
 const signOutUser = () => {
    return signOut(auth).then(() => {
-        console.log('SignOut Successfull')
+    Swal.fire({
+      title: "SignOut Successfully",
+      text: "Do you want to continue",
+      icon: "success",
+      confirmButtonText: "Okey",
+    });
       }).catch((error) => {
         console.log('Error From ' , error)
       });
@@ -42,7 +48,7 @@ const signOutUser = () => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
         setUsers(currentUser)
         setLoader(false)
-   console.log(currentUser)
+   
     })
     return()=> {
         unSubscribe()

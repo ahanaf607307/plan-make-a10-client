@@ -15,7 +15,7 @@ function Login() {
     const email = e.target.email.value;
     const password = e.target.password.value;
     const loginUser = { email, password };
-    console.log(loginUser);
+
     setErrorInvalid("");
     if (password.length < 6) {
       setErrorInvalid("Password at least 6 carecter");
@@ -35,7 +35,7 @@ function Login() {
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
-        console.log("Error from login", error);
+        
         setErrorInvalid(error.message);
       });
   };
@@ -50,7 +50,7 @@ function Login() {
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
-        console.log("Error from ", error);
+ 
         setErrorInvalid(error.message);
         faildLoginAlert();
       });

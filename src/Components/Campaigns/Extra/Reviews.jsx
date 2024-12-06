@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaRegStar, FaStar, FaUserCircle } from "react-icons/fa";
+import { Typewriter } from 'react-simple-typewriter';
 
 function Reviews() {
   return (
@@ -10,7 +11,18 @@ function Reviews() {
 <div className='flex gap-x-3 items-center'>
 <h1 className='text-3xl'><FaUserCircle /></h1>
 <div className='my-5'>
-    <h1 className='font-semibold text-xl'>Mr. Ayas Bin Ataur</h1>
+    <h1 className='font-semibold text-xl'>
+      <Typewriter
+            words={['Mr. Ayas Bin Ataur']}
+            loop={Infinity} 
+            cursor
+            cursorStyle="_"
+            typeSpeed={200}
+            deleteSpeed={100}
+            delaySpeed={2000}
+          />
+    </h1>
+    
     <p className='font-medium text-gray-600'>Ayas LTD</p>
 </div>
 </div>
@@ -25,7 +37,17 @@ function Reviews() {
 <div className='flex gap-x-3 items-center'>
 <h1 className='text-3xl'><FaUserCircle /></h1>
 <div className='my-5'>
-    <h1 className='font-semibold text-xl'>Mr. Arosh Al Hasan</h1>
+    <h1 className='font-semibold text-xl'>
+    <Typewriter
+            words={['Mr. Arosh Al Hasan']}
+            loop={Infinity} 
+            cursor
+            cursorStyle="_"
+            typeSpeed={200}
+            deleteSpeed={100}
+            delaySpeed={2000}
+          />
+    </h1>
     <p className='font-medium text-gray-600'>Cricketer</p>
 </div>
 </div>
@@ -40,7 +62,17 @@ function Reviews() {
 <div className='flex gap-x-3 items-center'>
 <h1 className='text-3xl'><FaUserCircle /></h1>
 <div className='my-5'>
-    <h1 className='font-semibold text-xl'>Mr. Adnan Malik</h1>
+    <h1 className='font-semibold text-xl'>
+    <Typewriter
+            words={['Mr. Adnan Malik']}
+            loop={Infinity} 
+            cursor
+            cursorStyle="_"
+            typeSpeed={200}
+            deleteSpeed={100}
+            delaySpeed={2000}
+          />
+    </h1>
     <p className='font-medium text-gray-600'>COO Funder</p>
 </div>
 </div>
@@ -55,7 +87,17 @@ function Reviews() {
 <div className='flex gap-x-3 items-center'>
 <h1 className='text-3xl'><FaUserCircle /></h1>
 <div className='my-5'>
-    <h1 className='font-semibold text-xl'>Mr. Mubasshir Abdullah</h1>
+    <h1 className='font-semibold text-xl'>
+    <Typewriter
+            words={['Mr. Mubasshir Abdullah']}
+            loop={Infinity} 
+            cursor
+            cursorStyle="_"
+            typeSpeed={200}
+            deleteSpeed={100}
+            delaySpeed={2000}
+          />
+    </h1>
     <p className='font-medium text-gray-600'>MA LTD</p>
 </div>
 </div>
@@ -70,7 +112,17 @@ function Reviews() {
 <div className='flex gap-x-3 items-center'>
 <h1 className='text-3xl'><FaUserCircle /></h1>
 <div className='my-5'>
-    <h1 className='font-semibold text-xl'>Mr. Ahanaf Ahmed</h1>
+    <h1 className='font-semibold text-xl'>
+    <Typewriter
+            words={['Mr. Ahanaf Ahmed']}
+            loop={Infinity} 
+            cursor
+            cursorStyle="_"
+            typeSpeed={200}
+            deleteSpeed={100}
+            delaySpeed={2000}
+          />
+    </h1>
     <p className='font-medium text-gray-600'>HeadC Ah It LTD</p>
 </div>
 </div>
@@ -85,7 +137,17 @@ function Reviews() {
 <div className='flex gap-x-3 items-center'>
 <h1 className='text-3xl'><FaUserCircle /></h1>
 <div className='my-5'>
-    <h1 className='font-semibold text-xl'>Mr. Ratul Mahmud</h1>
+    <h1 className='font-semibold text-xl'>
+    <Typewriter
+            words={['Mr. Ratul Mahmud']}
+            loop={Infinity} 
+            cursor
+            cursorStyle="_"
+            typeSpeed={200}
+            deleteSpeed={100}
+            delaySpeed={2000}
+          />
+    </h1>
     <p className='font-medium text-gray-600'>Ceo Child Age Care</p>
 </div>
 </div>
