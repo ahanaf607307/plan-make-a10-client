@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaRegStar, FaStar, FaUserCircle } from "react-icons/fa";
+
 function Reviews() {
   return (
     <div className='md:p-5 '>

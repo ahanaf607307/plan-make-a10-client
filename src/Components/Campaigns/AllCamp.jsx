@@ -5,10 +5,7 @@ import { AuthContext } from '../../FireBase/AuthProvider';
 function AllCamp() {
   const campaign = useLoaderData();
 
-  // State to manage sorted campaigns
   const [sorded, setSorted] = useState(campaign);
-
-  // Sorting function (Descending order)
   const handleSort = () => {
     const sortData = [...sorded].sort((a, b) => b.minDonation - a.minDonation);
     setSorted(sortData);

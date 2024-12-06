@@ -1,10 +1,13 @@
 import React from 'react'
+import { Fade } from 'react-awesome-reveal'
 import { Link } from 'react-router-dom'
 
 function RunningCampCard({camps}) {
   const {_id,imageUrl,campignsName,campignsType,minDonation,deadline,userEmail,userName} = camps
   return (
-    <div className="card flex flex-col h-[470px] card-compact bg-base-100  shadow-xl animate__jackInTheBox animate__animated relative ">
+  <>
+  <Fade>
+  <div className="card flex flex-col h-[470px] card-compact bg-base-100  shadow-xl  ">
   <div className=''>
     <img
       src={imageUrl}
@@ -26,6 +29,8 @@ function RunningCampCard({camps}) {
   </div>
   <Link to={`/details/${_id}`} className='btn w-full bg-blue-200 '>See more </Link>
 </div>
+  </Fade>
+  </>
   )
 }
 
