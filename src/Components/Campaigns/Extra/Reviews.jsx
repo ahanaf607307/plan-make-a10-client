@@ -3,7 +3,7 @@ import { FaRegStar, FaStar, FaUserCircle } from "react-icons/fa";
 function Reviews() {
   return (
     <div className='md:p-5 '>
-      <h1 className='text-3xl font-semibold text-center bg-blue-500'>-- What People Say --</h1>
+      <h1 className='text-2xl md:text-3xl font-semibold text-center text-blue-500'>-- What People Say --</h1>
       <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-5 my-10'>
         <div className="card w-80 border-2 p-3">
 <div className='flex gap-x-3 items-center'>

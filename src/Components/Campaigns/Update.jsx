@@ -55,9 +55,10 @@ function Update() {
       
   };
   return (
-    <div className="w-8/12 border-2 ">
-      <form onSubmit={handleAddCamp}>
-        <div className="grid grid-cols-2">
+    <div  className='md:w-10/12 border-2 rounded-xl p-10 md:my-20 mx-auto shadow-xl'>
+      <h1 className="text-center font-semibold my-5 text-2xl">Update Campaign : <span className="text-blue-500">{campaigns.campignsName}</span></h1>
+      <form onSubmit={handleAddCamp} >
+        <div className='grid md:grid-cols-2 text-gray-600 font-semibold'>
           <div>
             <label className="form-control w-full max-w-xs">
               <div className="label">
@@ -77,7 +78,7 @@ function Update() {
               <input
                 type="text"
                 name="campignsName"
-                defaultValue={campaigns.userName}
+                defaultValue={campaigns.campignsName}
                 className="input input-bordered w-full max-w-xs"
               />
             </label>
@@ -106,7 +107,9 @@ function Update() {
               <textarea
                 name="description"
                 defaultValue={campaigns.description}
-                className="input input-bordered w-full max-w-xs"
+                maxlength="340"
+                
+                className="input input-bordered w-full max-w-xs  "
               ></textarea>
             </label>
           </div>
@@ -165,7 +168,7 @@ function Update() {
         <input
           type="submit"
           value="Add Campaign"
-          className="btn w-full bg-red-500 "
+          className="btn w-full bg-blue-500 my-5 text-white"
         />
       </form>
     </div>
