@@ -27,7 +27,7 @@ function Details() {
     if (lastDateForDonation < currentDate) {
       Swal.fire({
         title: "Deadline is Over",
-        text: "The deadline for this campaign has already passed!",
+        text: "Ok to continue",
         icon: "error",
       });
       return false;
