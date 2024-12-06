@@ -12,7 +12,7 @@ function Banner() {
     <Swiper
       pagination={true}
       modules={[Pagination]}
-      className="w-80 md:w-[680px] lg:w-[980px] xl:w-[1200px] mx-auto md:h-[500px] h-64 rounded-xl"
+      className="w-80 md:w-[680px] lg:w-[1024px]  mx-auto md:h-[500px] h-64 rounded-xl"
     >
       <SwiperSlide>
         <img
