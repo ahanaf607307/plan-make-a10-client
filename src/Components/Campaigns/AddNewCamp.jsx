@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import { AuthContext } from '../../FireBase/AuthProvider'
 import Swal from 'sweetalert2'
+import { AuthContext } from '../../FireBase/AuthProvider'
 
 
 function AddNewCamp() {
@@ -90,12 +90,12 @@ function AddNewCamp() {
       <div>
       <label className="form-control w-full max-w-xs">
           <div className="label">
-            <span className="label-text">Minimum Donation Amount "1000 $"</span>
+            <span className="label-text">Minimum Donation Amount </span>
           </div>
           <input
-            type="text"
+            type="number"
             name="minDonation"
-            defaultValue="1000"
+           placeholder='Minimum Donation Amount'
             className="input input-bordered w-full max-w-xs" required
           />
         </label>

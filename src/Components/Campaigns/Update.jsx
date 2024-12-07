@@ -119,7 +119,7 @@ function Update() {
                 </span>
               </div>
               <input
-                type="text"
+                type="number"
                 name="minDonation"
                 defaultValue={campaigns.minDonation}
                 className="input input-bordered w-full max-w-xs"

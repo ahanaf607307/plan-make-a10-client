@@ -22,7 +22,7 @@ function MyDonations() {
       </div>
      <div className="my-3 px-2 flex-1 space-y-2 text-gray-500 font-semibold">
           
-       <h1 className='text-xl my-3 font-bold text-black'>{camp.detail?.campignsName}</h1>
+       <h1 className='text-xl my-3 font-bold text-gray-700'>{camp.detail?.campignsName}</h1>
        <h2>Tpye : {camp.detail?.campignsType}</h2>
        
         
