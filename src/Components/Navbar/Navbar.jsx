@@ -6,8 +6,8 @@ import { FaFirefoxBrowser } from "react-icons/fa";
 
 function Navbar() {
   const { users, signOutUser } = useContext(AuthContext);
-
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+ 
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -90,7 +90,8 @@ function Navbar() {
               )}
             </div>
           </div>
-          <ul
+         
+              <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-blue-200 rounded-box z-[1] mt-3  w-52 p-2 shadow"
           >
@@ -117,6 +118,7 @@ function Navbar() {
               )}
             </li>
           </ul>
+           
         </div>
         <div className="dropdown relative" id="navbar">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

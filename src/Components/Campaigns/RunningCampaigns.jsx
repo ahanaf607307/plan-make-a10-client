@@ -12,7 +12,7 @@ function RunningCampaigns({runningCampData}) {
   return (
     <div>
       <h1 className='text-sm text-orange-600 text-center font-bold mt-4 lg:mt-14'><Typewriter
-            words={['-- BUSINESSES YOU CAN BACK --']}
+            words={['- BUSINESSES YOU CAN BACK -']}
             loop={Infinity} 
             cursor
             cursorStyle="_"
