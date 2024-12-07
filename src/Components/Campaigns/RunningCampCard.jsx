@@ -17,7 +17,7 @@ function RunningCampCard({camps}) {
   <div className="my-3 px-2 flex-1 space-y-2 text-center">
     
     <h1 className='text-2xl my-4 font-bold'>{campignsName}</h1>
-    <h2 className='absolute top-52 right-24 text-white rounded-sm bg-orange-600 px-2 py-1'> {campignsType}</h2>
+    <h2 className='absolute top-44 md:top-52 right-24 text-white rounded-sm bg-orange-600 px-2 py-1'> {campignsType}</h2>
  
   
   <div className='flex justify-between text-gray-500 px-3 mt-5'>
