@@ -1,5 +1,6 @@
 import React from 'react'
 import { Fade } from 'react-awesome-reveal'
+import { Helmet } from 'react-helmet-async'
 import { useLoaderData } from 'react-router-dom'
 
 function MyDonations() {
@@ -9,6 +10,9 @@ function MyDonations() {
   
 
     <>
+    <Helmet>
+        <title>My Donation | PlanMake</title>
+      </Helmet>
     <Fade>
     <h1 className='text-center font-semibold text-3xl md:text-4xl mt-10'>You Donated At : <span className='text-blue-500'>{camps.length}</span> Campaign's</h1>
        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 mb-5' >

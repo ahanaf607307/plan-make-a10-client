@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import Swal from 'sweetalert2'
 import { AuthContext } from '../../FireBase/AuthProvider'
+import { Helmet } from 'react-helmet-async'
 
 
 function AddNewCamp() {
@@ -40,6 +41,9 @@ function AddNewCamp() {
   }
   return (
     <div className='md:w-10/12 border-2 rounded-xl p-10 md:my-20 mx-auto'>
+      <Helmet>
+        <title>Add New Campaign | PlanMake</title>
+      </Helmet>
       <h1 className='text-center font-semibold text-3xl my-6'>Add New Campaign</h1>
      <form onSubmit={handleAddCamp}>
     <div className='grid md:grid-cols-2 text-gray-600 font-semibold'>
@@ -84,7 +88,7 @@ function AddNewCamp() {
           <div className="label">
             <span className="label-text">Description</span>
           </div>
-          <textarea  maxlength="340" name="description" placeholder='Description' className='input input-bordered w-full max-w-xs' required></textarea>
+          <textarea  maxLength="340" name="description" placeholder='Description' className='input input-bordered w-full max-w-xs' required></textarea>
         </label>
         </div>
       <div>

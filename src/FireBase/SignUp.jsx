@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { AuthContext } from "./AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 function SignUp() {
   const { registerUserNew , setUsers ,updateProfileUser , setErrorInvalid,errorInvalid} = useContext(AuthContext);
@@ -66,6 +67,9 @@ function SignUp() {
   };
   return (
     <div className="border-2 rounded-xl shadow-2xl md:w-[500px] my-10 md:my-32 mx-auto p-4 m-2 md:p-10">
+      <Helmet>
+        <title>Regiser/SignUp | PlanMake</title>
+      </Helmet>
        <h1 className="text-center font-semibold my-5 text-3xl">Register Your Account</h1>
       <form onSubmit={handleRegister} className="font-semibold text-gray-600">
         <label className="form-control w-full ">

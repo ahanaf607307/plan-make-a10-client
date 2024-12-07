@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../FireBase/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 function Update() {
   const { users } = useContext(AuthContext);
@@ -54,6 +55,9 @@ function Update() {
   };
   return (
     <div  className='md:w-10/12 border-2 rounded-xl p-10 md:my-20 mx-auto shadow-xl'>
+      <Helmet>
+        <title>Update Campaign | PlanMake</title>
+      </Helmet>
       <h1 className="text-center font-semibold my-5 text-2xl">Update Campaign : <span className="text-blue-500">{campaigns.campignsName}</span></h1>
       <form onSubmit={handleAddCamp} >
         <div className='grid md:grid-cols-2 text-gray-600 font-semibold'>
@@ -105,7 +109,7 @@ function Update() {
               <textarea
                 name="description"
                 defaultValue={campaigns.description}
-                maxlength="340"
+                maxLength="340"
                 
                 className="input input-bordered w-full max-w-xs  "
               ></textarea>

@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../FireBase/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 function Details() {
   const detail = useLoaderData();
@@ -70,6 +71,9 @@ function Details() {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 items-center border-2 my-20 rounded-md shadow-xl bg-blue-100 gap-5 p-5">
+      <Helmet>
+        <title>Details | PlanMake</title>
+      </Helmet>
       <div className="img">
         <img src={imageUrl} className="w-full rounded-xl" />
       </div>

@@ -1,6 +1,6 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link, useLoaderData } from 'react-router-dom';
-import { AuthContext } from '../../FireBase/AuthProvider';
 
 function AllCamp() {
   const campaign = useLoaderData();
@@ -13,6 +13,9 @@ function AllCamp() {
 
   return (
     <div>
+      <Helmet>
+        <title>All Campaign | PlanMake</title>
+      </Helmet>
       <h1 className="text-center text-3xl mt-10 mb-7 font-semibold">All Campaigns</h1>
 
       <div className="text-center my-5 flex gap-2 items-center justify-center">

@@ -75,6 +75,9 @@ function Login() {
   };
   return (
     <div className="border-2 rounded-xl shadow-2xl md:w-[500px] my-10 md:my-32 mx-auto p-4 m-2 md:p-10">
+      <Helmet>
+        <title>Login | PlanMake</title>
+      </Helmet>
       <h1 className="text-center font-semibold my-5 text-3xl">Login Your Account</h1>
       <form onSubmit={handleLogin} className="font-semibold text-gray-600">
         <label className="form-control w-full ">

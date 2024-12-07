@@ -4,6 +4,7 @@ import Swal from 'sweetalert2'
 import { MdDeleteForever } from "react-icons/md";
 import { BiSolidEdit } from "react-icons/bi";
 import { AuthContext } from '../../FireBase/AuthProvider'
+import { Helmet } from 'react-helmet-async';
 
 function MyCampaign() {
   const campaigns = useLoaderData()
@@ -44,6 +45,9 @@ function MyCampaign() {
   }
   return (
     <div className='my-12'>
+      <Helmet>
+        <title>My Campaign | PlanMake</title>
+      </Helmet>
       <h1 className='text-center text-3xl md:text-4xl font-semibold'>{users.displayName}-Campaigns</h1>
       <h1 className='text-2xl text-blue-500 my-5 font-semibold'>Your Total Campaign : {
         campaigns.length
