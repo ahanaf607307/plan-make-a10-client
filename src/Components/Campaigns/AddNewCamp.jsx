@@ -103,7 +103,7 @@ function AddNewCamp() {
             className="input input-bordered w-full max-w-xs" required
           />
         </label>
-        <label className="form-control w-full max-w-xs">
+        <label className="form-control w-full max-w-xs cursor-pointer">
           <div className="label">
             <span className="label-text">Deadline</span>
           </div>
@@ -111,7 +111,7 @@ function AddNewCamp() {
             type="date"
             name="deadline"
             placeholder="Deadline"
-            className="input input-bordered w-full max-w-xs" required
+            className="input input-bordered w-full max-w-xs cursor-pointer" required
           />
         </label>
       </div>
