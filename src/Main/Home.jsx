@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import RunningCampaigns from '../Components/Campaigns/RunningCampaigns'
 import { useLoaderData } from 'react-router-dom'
 import Discovar from '../Components/Campaigns/Extra/Discovar'
 import Reviews from '../Components/Campaigns/Extra/Reviews'
 import Banner from '../Components/Campaigns/Banner'
+
 
 function Home() {
 const runningCampData = useLoaderData()
