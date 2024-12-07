@@ -26,8 +26,7 @@ const apiInfo = {
     camp,
     allCamp,
     allCamp,
-    // setUpdateCamp,
-    // updateCamp
+  
 }
 
   return(
