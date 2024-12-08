@@ -18,7 +18,7 @@ function Update() {
       campignsType: e.target.campignsType.value,
       description: e.target.description.value,
       minDonation: Number(e.target.minDonation.value),
-      deadline: new Date(e.target.deadline.value).toLocaleDateString(),
+      deadline: new Date(e.target.deadline.value).toLocaleDateString() || campaigns.deadline,
       userEmail: e.target.userEmail.value,
       userName: e.target.userName.value,
     };
@@ -129,8 +129,9 @@ function Update() {
               <input
                 type="date"
                 name="deadline"
-                defaultValue={campaigns?.deadline}
-                className="input input-bordered w-full max-w-xs"
+                // defaultValue={new Date().toISOString().split('T')[0]}
+                className="input input-bordered w-full max-w-xs cursor-pointer"
+                required
               />
             </label>
           </div>
