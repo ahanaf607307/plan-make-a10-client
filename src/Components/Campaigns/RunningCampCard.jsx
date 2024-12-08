@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 function RunningCampCard({camps}) {
   const {_id,imageUrl,campignsName,campignsType,minDonation,deadline,userEmail,userName} = camps
+
   return (
   <>
   <Fade>

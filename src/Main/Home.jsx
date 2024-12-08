@@ -9,7 +9,7 @@ import { Helmet } from 'react-helmet-async'
 
 function Home() {
 const runningCampData = useLoaderData()
-
+console.log(runningCampData)
 
   return (
     <div className='my-12'>

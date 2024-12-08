@@ -1,44 +1,43 @@
 import React, { useContext } from 'react'
+import { Helmet } from 'react-helmet-async'
 import Swal from 'sweetalert2'
 import { AuthContext } from '../../FireBase/AuthProvider'
-import { Helmet } from 'react-helmet-async'
 
 
 function AddNewCamp() {
   const {users} = useContext(AuthContext)
  
-
   const handleAddCamp = (e) => {
-    e.preventDefault()
-    const imageUrl = e.target.imageUrl.value;
-    const campignsName = e.target.campignsName.value;
-    const campignsType = e.target.campignsType.value;
-    const description = e.target.description.value;
-    const minDonation = e.target.minDonation.value;
-    const deadline = e.target.deadline.value;
-    const userEmail = e.target.userEmail.value;
-    const userName = e.target.userName.value;
-
-    const addCampDetails = {imageUrl,campignsName,campignsType,description,minDonation,deadline,userEmail,userName}
-
-    fetch('https://server-croud-funding.vercel.app/campaigns' , {
-      method:'POST',
-      headers:{
-        'content-type' : 'application/json'
-      },
-      body:JSON.stringify(addCampDetails)
+    e.preventDefault();
+    const addCampDetails = {
+      imageUrl: e.target.imageUrl.value,
+      campignsName: e.target.campignsName.value,
+      campignsType: e.target.campignsType.value,
+      description: e.target.description.value,
+      minDonation: Number(e.target.minDonation.value),
+      deadline: new Date(e.target.deadline.value).toISOString(),
+      userEmail: e.target.userEmail.value,
+      userName: e.target.userName.value,
+    };
+  
+    fetch('https://server-croud-funding.vercel.app/campaigns', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(addCampDetails),
     })
-    .then(result => result.json())
-    .then(data => {
-      Swal.fire({
-        title: "Added Campaign",
-        text: "Your Campaign has been Added.",
-        icon: "success"
-      });
-    })
-
-    
-  }
+      .then((response) => {
+        return response.json();
+      })
+      .then(() => {
+        Swal.fire({
+          title: 'Added Campaign',
+          text: 'Your Campaign has been added successfully.',
+          icon: 'success',
+        });
+      })
+     
+  };
+  
   return (
     <div className='md:w-10/12 border-2 rounded-xl p-10 md:my-20 mx-auto'>
       <Helmet>
@@ -76,7 +75,7 @@ function AddNewCamp() {
           <div className="label">
             <span className="label-text">Select Campaign Type</span>
           </div>
-        <select name="campignsType" className='input input-bordered w-full max-w-xs' required>
+        <select name="campignsType" className='input input-bordered w-full max-w-xs' >
           <option value="">Select Campaign Type</option>
           <option value="Personal Issue">Personal Issue</option>
           <option value="Startup">Startup</option>
@@ -101,6 +100,7 @@ function AddNewCamp() {
             name="minDonation"
            placeholder='Minimum Donation Amount'
             className="input input-bordered w-full max-w-xs" required
+            min='1'
           />
         </label>
         <label className="form-control w-full max-w-xs cursor-pointer">

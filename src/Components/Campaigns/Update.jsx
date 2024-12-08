@@ -12,25 +12,18 @@ function Update() {
 
   const handleAddCamp = (e) => {
     e.preventDefault();
-    const imageUrl = e.target.imageUrl.value;
-    const campignsName = e.target.campignsName.value;
-    const campignsType = e.target.campignsType.value;
-    const description = e.target.description.value;
-    const minDonation = e.target.minDonation.value;
-    const deadline = e.target.deadline.value;
-    const userEmail = e.target.userEmail.value;
-    const userName = e.target.userName.value;
-
     const addCampDetails = {
-      imageUrl,
-      campignsName,
-      campignsType,
-      description,
-      minDonation,
-      deadline,
-      userEmail,
-      userName,
+      imageUrl: e.target.imageUrl.value,
+      campignsName: e.target.campignsName.value,
+      campignsType: e.target.campignsType.value,
+      description: e.target.description.value,
+      minDonation: Number(e.target.minDonation.value),
+      deadline: new Date(e.target.deadline.value).toLocaleDateString(),
+      userEmail: e.target.userEmail.value,
+      userName: e.target.userName.value,
     };
+
+    
   
     fetch(`https://server-croud-funding.vercel.app/campaigns/${_id}`, {
       method: "PATCH",
@@ -58,7 +51,7 @@ function Update() {
       <Helmet>
         <title>Update Campaign | PlanMake</title>
       </Helmet>
-      <h1 className="text-center font-semibold my-5 text-2xl">Update Campaign : <span className="text-blue-500">{campaigns.campignsName}</span></h1>
+      <h1 className="text-center font-semibold my-5 text-2xl">Update Campaign : <span className="text-blue-500">{campaigns?.campignsName}</span></h1>
       <form onSubmit={handleAddCamp} >
         <div className='grid md:grid-cols-2 text-gray-600 font-semibold'>
           <div>
@@ -69,7 +62,7 @@ function Update() {
               <input
                 type="text"
                 name="imageUrl"
-                defaultValue={campaigns.imageUrl}
+                defaultValue={campaigns?.imageUrl}
                 className="input input-bordered w-full max-w-xs"
               />
             </label>
@@ -80,7 +73,7 @@ function Update() {
               <input
                 type="text"
                 name="campignsName"
-                defaultValue={campaigns.campignsName}
+                defaultValue={campaigns?.campignsName}
                 className="input input-bordered w-full max-w-xs"
               />
             </label>
@@ -92,7 +85,7 @@ function Update() {
               </div>
               <select
                 name="campignsType"
-                defaultValue={campaigns.campignsType}
+                defaultValue={campaigns?.campignsType}
                 className="input input-bordered w-full max-w-xs"
               >
                 <option value="">Select Campaign Type</option>
@@ -108,7 +101,7 @@ function Update() {
               </div>
               <textarea
                 name="description"
-                defaultValue={campaigns.description}
+                defaultValue={campaigns?.description}
                 maxLength="340"
                 
                 className="input input-bordered w-full max-w-xs  "
@@ -125,7 +118,7 @@ function Update() {
               <input
                 type="number"
                 name="minDonation"
-                defaultValue={campaigns.minDonation}
+                defaultValue={campaigns?.minDonation}
                 className="input input-bordered w-full max-w-xs"
               />
             </label>
@@ -136,7 +129,7 @@ function Update() {
               <input
                 type="date"
                 name="deadline"
-                defaultValue={campaigns.deadline}
+                defaultValue={campaigns?.deadline}
                 className="input input-bordered w-full max-w-xs"
               />
             </label>
