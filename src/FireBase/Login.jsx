@@ -34,6 +34,7 @@ function Login() {
           icon: "success",
         });
         navigate(location?.state ? location.state : "/");
+        console.log(result)
       })
       .catch((error) => {
         
@@ -49,6 +50,7 @@ function Login() {
         });
         loginSuccessAlert();
         navigate(location?.state ? location.state : "/");
+        console.log(result)
       })
       .catch((error) => {
  
