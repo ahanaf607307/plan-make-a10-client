@@ -59,14 +59,7 @@ function Details() {
           icon: "success",
         });
       })
-      .catch((error) => {
-        console.error("Error from details -> :", error);
-        Swal.fire({
-          title: "Error",
-          text: "An error occurred while processing your donation.",
-          icon: "error",
-        });
-      });
+      
   };
 
   return (

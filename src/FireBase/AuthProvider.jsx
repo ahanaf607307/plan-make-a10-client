@@ -47,7 +47,7 @@ const signOutUser = () => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
         setUsers(currentUser)
         setLoader(false)
-   console.log(currentUser)
+
     })
     return()=> {
         unSubscribe()
