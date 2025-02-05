@@ -114,6 +114,7 @@ function Navbar() {
                 <h1>{users?.displayName}</h1>
               </div>
             </li>
+           
             <li>
               {users ? (
                 <button onClick={() => signOutUser()} className="btn">

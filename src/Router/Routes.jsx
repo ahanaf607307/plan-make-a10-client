@@ -49,7 +49,7 @@ const routes = createBrowserRouter([
         path: "/myCamp/:email",
         element: (
           <PrivateRoute>
-            <MyCampaign />
+            <MyCampaign/>
           </PrivateRoute>
         ),
         loader: ({ params }) =>
